@@ -14,7 +14,8 @@ import { FilterComponent } from './filter/filter.component';
 })
 export class AppComponent {
   pokemons = pokemons;
-
+  POKEMON_DESCRIPTION =
+    'Descripción: Este componente muestra una lista de tarjetas de Pokémon. El usuario puede filtrar la lista seleccionando un tipo de Pokémon en el selector en la parte superior. La lista se actualizará automáticamente para mostrar solo los Pokémon que tienen el tipo seleccionado.';
   ngOnInit() {
     console.log(pokemons);
   }
