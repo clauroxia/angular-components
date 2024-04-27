@@ -26,7 +26,7 @@ export class ProductCardComponent {
   decreaseQuantity(){
     if (this.quantity === 0) return
     this.quantity -= 1
-    this.emitQuantityChange
+    this.emitQuantityChange()
   }
 
   emitQuantityChange(){
