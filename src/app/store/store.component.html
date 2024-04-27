@@ -10,7 +10,7 @@
       </p>
     </div>
     <div class="shopping-cart__demo">
-      <app-product-list></app-product-list>
+      <app-product-list (orderChange)="onOrderChange($event)" />
       <app-shopping-cart></app-shopping-cart>
     </div>
   </div>
