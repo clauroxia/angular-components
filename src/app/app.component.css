@@ -1,0 +1,47 @@
+.project__header {
+  padding: var(--spacing-12) 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.project__title {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: var(--leading-10);
+}
+
+.project__team {
+  font-weight: 600;
+  color: var(--muted-foreground);
+  font-size: var(--text-xl);
+  line-height: var(--leading-8);
+}
+
+.project__component {
+  background-color: var(--neutral-50);
+  padding: var(--spacing-12) 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project__component-filter {
+  padding: var(--spacing-12) 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project__component-description {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 32px;
+  max-width: 920px;
+}
+
+.project__component-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: var(--leading-8);
+}
