@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './shopping-cart.component.css'
 })
 export class ShoppingCartComponent {
-
+  isDisabled = false;
 }
