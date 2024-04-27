@@ -1,0 +1,15 @@
+<div class="product-list">
+
+  <div *ngFor="let product of products">
+    <app-product-card
+    [product_id]="product.id"
+    [product_name]="product.name"
+    [product_category]="product.category"
+    [product_price]="product.price"
+    [product_img_url]="product.image_url"
+    
+    (quantityChange) = "onQuantityChange($event)"
+    />
+  </div>
+  
+</div>
