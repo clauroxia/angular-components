@@ -22,6 +22,8 @@
 @import url(5-components/funciones.css);
 @import url(5-components/dom.css);
 @import url(5-components/form.css);
+@import url(5-components/pokemon.css);
+@import url(5-components/form-field.css);
 
 /* Atoms */
 @import url(5-components/button.css);
