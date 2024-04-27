@@ -57,7 +57,13 @@ button{
 }
 
 input{
-  text-align: center
+  text-align: center;
+  line-height: 20px;
+}
+
+.in-cart{
+  background-color: #E2FBE8;
+  border-color: var(--primary);
 }
 
 .category-tag{
