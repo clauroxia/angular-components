@@ -13,17 +13,21 @@ import products from '../../data/products.json'
 })
 export class ShoppingCartComponent {
   @Input() order: Order = []
-  products = products
+  productsList = products
+  isDisabled = true
+
+  noProduct() {
+    this.isDisabled = this.order.length ? false : true
+  }
 
   calculateTotal(){
-    let  total = 0
+    let total = 0
     for (let product of this.order){
       let quantity = product.quantity
-      let price = products[product.id - 1].price
+      let price = this.productsList[product.id - 1].price
       total += quantity * price
     }
-
-    return total
+    return total.toFixed(1)
   }
 
   trackByProductId(_index: number, productQuantity: ProductQuantity){

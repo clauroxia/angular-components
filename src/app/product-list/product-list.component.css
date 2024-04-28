@@ -3,7 +3,9 @@
   flex-direction: column;
   gap: var(--spacing-8);
   padding: var(--spacing-4) var(--spacing-2);
-
+  border-top-left-radius: var(--rounded-2xl);
+  border-bottom-left-radius: var(--rounded-2xl);
+  background-color: var(--white);
 }
 
 p{
@@ -14,11 +16,10 @@ p{
 }
 
 .product-list{
-  width: 572px;
   list-style-type: none;
   display: grid;
   gap: var(--spacing-4);
-  grid-template-columns: 160px 160px 160px;
+  grid-template-columns: repeat(auto-fill, 160px);
   column-gap: var(--spacing-4);
   justify-content: center;
 }

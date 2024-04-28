@@ -6,7 +6,7 @@
   
   <div class="quantity-controls">
     
-    <button (click)="decreaseQuantity()">-</button>
+    <button (click)="decreaseQuantity()" class="button button--secondary button--sm">-</button>
 
     <input
       type="text" readonly
@@ -14,7 +14,7 @@
       [ngClass]="{'in-cart': quantity}"
     >
 
-    <button (click)="increaseQuantity()">+</button>
+    <button (click)="increaseQuantity()" class="button button--secondary button--sm">+</button>
     
   </div>
 </div>

@@ -18,6 +18,13 @@
   margin-bottom: 8px;
 }
 
+.shopping-cart__header p {
+  font-size: var(--font-lg);
+  font-weight: 400;
+  line-height: var(--leading-8);
+  color: var(--foreground);
+}
+
 .shopping-cart__demo {
   padding-inline: 16px;
   display: grid;
