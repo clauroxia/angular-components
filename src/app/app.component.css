@@ -43,5 +43,16 @@
 .project__component-title {
   font-weight: 700;
   font-size: 24px;
+  line-height: var(--font-2xl);
+}
+
+.project__component-text {
+  font-size: var(--font-lg);
+  font-weight: 400;
   line-height: var(--leading-8);
+  color: var(--foreground);
+}
+
+.project__component-demo {
+  max-width: 920px;
 }

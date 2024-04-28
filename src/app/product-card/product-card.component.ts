@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ProductQuantity } from '../types/productQuantity';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-product-card',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './product-card.component.html',
   styleUrl: './product-card.component.css'
 })
@@ -19,15 +20,16 @@ export class ProductCardComponent {
 
   increaseQuantity(){
     this.quantity += 1
-    this.quantityChange.emit({
-      id: this.product_id,
-      quantity: this.quantity
-    })
+    this.emitQuantityChange()
   }
 
   decreaseQuantity(){
     if (this.quantity === 0) return
     this.quantity -= 1
+    this.emitQuantityChange()
+  }
+
+  emitQuantityChange(){
     this.quantityChange.emit({
       id: this.product_id,
       quantity: this.quantity

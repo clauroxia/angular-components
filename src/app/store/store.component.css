@@ -1,3 +1,13 @@
 :host {
   display: block;
 }
+
+.shopping-cart {
+  background-color: var( --neutral-50);
+}
+
+.shopping-cart__demo {
+  /* padding-inline: 16px; */
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
