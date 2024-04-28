@@ -11,11 +11,11 @@
         *ngFor="let item of order; trackBy: trackByProductId"
       >
         <p class="shopping-cart__content__product">
-          {{ productsList[item.id - 1].name }}
-          ($ {{ productsList[item.id - 1].price }} x {{ item.quantity }})
+          {{ productsList[findIndex(item.id)].name }}
+          ($ {{ productsList[findIndex(item.id)].price }} x {{ item.quantity }})
         </p>
         <p>
-          $ {{ (productsList[item.id - 1].price * item.quantity).toFixed(1) }}
+          $ {{ (productsList[findIndex(item.id)].price * item.quantity).toFixed(1) }}
         </p>
       </li>
     </ul>

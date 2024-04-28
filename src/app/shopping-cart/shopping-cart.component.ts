@@ -33,4 +33,8 @@ export class ShoppingCartComponent {
   trackByProductId(_index: number, productQuantity: ProductQuantity){
     return productQuantity.id
   }
+
+  findIndex(id: number) {
+    return this.productsList.findIndex(product => product.id === id)
+  }
 }
