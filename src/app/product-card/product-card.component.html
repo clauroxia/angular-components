@@ -1,0 +1,20 @@
+<div class="product-card">
+  <p class="category-tag">{{ product_category }}</p>
+  <img [src]="product_img_url">
+  <p class="product-name">{{ product_name }}</p>
+  <p class="product-price">$ {{ product_price }}</p>
+  
+  <div class="quantity-controls">
+    
+    <button (click)="decreaseQuantity()" class="button button--secondary button--sm">-</button>
+
+    <input
+      type="text" readonly
+      [value]="quantity"
+      [ngClass]="{'in-cart': quantity}"
+    >
+
+    <button (click)="increaseQuantity()" class="button button--secondary button--sm">+</button>
+    
+  </div>
+</div>

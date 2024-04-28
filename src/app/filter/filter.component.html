@@ -1,0 +1,28 @@
+<div class="filter-component">
+  <div class="form-field form-field-customized">
+    <label class="form-field__label"> Filter by type </label>
+    <select class="form-field__main-content" (change)="onSelectType($event)">
+      <option value="" selected>All Types</option>
+      <option *ngFor="let type of pokemonTypes" [value]="type">
+        {{ type }}
+      </option>
+    </select>
+  </div>
+  <div class="list">
+    <div class="pokemon__container">
+      <div *ngFor="let pokemon of filteredPokemons" class="pokemon__card">
+        <div>
+          <img
+            src="{{ pokemon.image_url }}"
+            alt="{{ pokemon.name }}"
+            class="pokemon__card-image"
+          />
+          <div class="pokemon__card-details">
+            <p class="pokemon__card-name">{{ pokemon.name }}</p>
+            <p class="pokemon__card-types">({{ pokemon.types.join(", ") }})</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

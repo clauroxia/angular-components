@@ -1,0 +1,8 @@
+<section class="shopping-cart">
+  <div class="container">
+    <div class="shopping-cart__demo">
+      <app-product-list (orderChange)="onOrderChange($event)"/>
+      <app-shopping-cart [order]="order"/>
+    </div>
+  </div>
+</section>

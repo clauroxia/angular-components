@@ -1,0 +1,30 @@
+.filter-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-8);
+  width: 100%;
+}
+
+.list {
+  width: 100%;
+}
+
+.form-field-customized {
+  min-width: 100%;
+}
+
+@media (min-width: 641px) {
+  .form-field-customized {
+    min-width: 300px;
+  }
+}
+
+@media (min-width: 769px) {
+  .list {
+    padding: 0 68px;
+  }
+  .form-field-customized {
+    min-width: 300px;
+  }
+}

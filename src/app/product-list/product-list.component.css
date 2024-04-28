@@ -1,0 +1,25 @@
+.product-list-container{
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  padding: var(--spacing-4) var(--spacing-2);
+  border-top-left-radius: var(--rounded-2xl);
+  border-bottom-left-radius: var(--rounded-2xl);
+  background-color: var(--white);
+}
+
+p{
+  font-family: var(--text);
+  font-weight: 700;
+  font-size: var(--font-2xl);
+  line-height: var(--leading-8);
+}
+
+.product-list{
+  list-style-type: none;
+  display: grid;
+  gap: var(--spacing-4);
+  grid-template-columns: repeat(auto-fill, 160px);
+  column-gap: var(--spacing-4);
+  justify-content: center;
+}

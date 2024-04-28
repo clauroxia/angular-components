@@ -1,0 +1,33 @@
+<div class="counter">
+  <div class="counter__content">
+    <p class="counter__title">Valor Actual:</p>
+    <p class="counter__status">{{ counter }}</p>
+  </div>
+
+  <div class="counter__actions">
+    <button class="button button--secondary button--sm" (click)="increment()">
+      +
+    </button>
+    <button
+      class="button button--secondary button--sm"
+      (click)="incrementBy10()"
+    >
+      ++
+    </button>
+    <button class="button button--secondary button--sm" (click)="reset()">
+      Reset
+    </button>
+    <button class="button button--secondary button--sm" (click)="random()">
+      Random
+    </button>
+    <button class="button button--secondary button--sm" (click)="decrement()">
+      -
+    </button>
+    <button
+      class="button button--secondary button--sm"
+      (click)="decrementBy10()"
+    >
+      --
+    </button>
+  </div>
+</div>
