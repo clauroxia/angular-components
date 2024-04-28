@@ -1,12 +1,30 @@
-<div class="shopping-cart__content">
-  <h1>Shopping Cart</h1>
-  <div class="shopping-cart__content__summary">
-    <ul>
-      <li></li>
-      <li></li>
-    </ul>
-    <p>Total</p>
-    <p></p>
+<div class="shopping-cart-container">
+
+  <p>Shopping Cart</p>
+
+  <ul>
+    <li
+      *ngFor="
+        let item of order;
+        trackBy: trackByProductId;
+      "
+    >
+      <div class="product-line">
+        <div class="name-price-quantity">
+          {{ products[item.id - 1].name }}
+          ($ {{ products[item.id - 1].price }} x {{item.quantity}})
+        </div>
+        <div class="product-total">
+          $ {{ products[item.id - 1].price * item.quantity}}
+        </div>
+      </div>
+    </li>
+  </ul>
+  <div class="total-line">
+    <div class="total-title">Total</div>
+    <div class="total-amount">$ {{ calculateTotal() }}</div>
   </div>
-  <button class="button" [disabled]="isDisabled">Submit Your Order</button>
+
+  <button>Submit Your Order</button>
+
 </div>

@@ -7,34 +7,6 @@
   gap: 16px;
 }
 
-form {
-  width: 330px;
-  margin: 0 auto;
-  background-color: #fff;
-  border-radius: var(--rounded-lg);
-  padding: 16px;
-  display: grid;
-  gap: 16px;
-}
-input, textarea {
-  border-radius: var(--rounded-md);
-  border: 1px solid #D4D4D4;
-  width: 100%;
-  padding: 8px;
- 
-}
-
-.form-info{
-  background: #fff;
-}
-.form-label{
-  font-size: 14px;
-  line-height: 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
 .span-form{
   color:  #DC2626;
   font-family: inter;

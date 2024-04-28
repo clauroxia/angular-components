@@ -8,11 +8,13 @@
     
     <button (click)="decreaseQuantity()">-</button>
 
-    <input type="text" [value]="quantity" readonly>
+    <input
+      type="text" readonly
+      [value]="quantity"
+      [ngClass]="{'in-cart': quantity}"
+    >
 
     <button (click)="increaseQuantity()">+</button>
     
   </div>
 </div>
-
-
