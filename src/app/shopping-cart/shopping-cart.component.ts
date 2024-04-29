@@ -24,7 +24,7 @@ export class ShoppingCartComponent {
     let total = 0
     for (let product of this.order){
       let quantity = product.quantity
-      let price = this.productsList[product.id - 1].price
+      let price = this.productsList[this.findIndex(product.id)].price
       total += quantity * price
     }
     return total.toFixed(1)
