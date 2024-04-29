@@ -1,8 +1,6 @@
 .product-card{
   position: relative;
 
-  position: relative;
-
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -14,8 +12,6 @@
   padding: 12px 16px;
 
   font-family: var(--text);
-
-  font-family: var(--text);
 }
 
 p {
@@ -25,9 +21,7 @@ p {
 .product-name{
   font-weight: 400;
   font-size: 16px;
-  line-height: 28px;
-  
-  
+  line-height: 28px; 
 }
 
 .product-price{
@@ -56,12 +50,11 @@ img {
   border-radius: 6px;
   text-align: center;
   line-height: 20px;
-  border: 1px solid var(--muted);
 }
 
 .in-cart{
   background-color: #E2FBE8;
-  border-color: var(--primary);
+  border: 1px solid var(--primary);
 }
 
 .category-tag{
