@@ -15,26 +15,31 @@ export class ShoppingCartComponent {
   @Input() order: Order = []
   productsList = products
   isDisabled = true
+  price = 0
+  name = ""
+  subtotal = 0
 
   noProduct() {
-    this.isDisabled = this.order.length ? false : true
+    return this.isDisabled = this.order.length ? false : true
+  }
+
+  calculateSubTotal(id: number, quantity: number) {
+    let index = this.productsList.findIndex(product => product.id === id)
+    this.name = this.productsList[index].name
+    this.price = this.productsList[index].price
+    this.subtotal = this.price*quantity
+    return this.subtotal
   }
 
   calculateTotal(){
     let total = 0
     for (let product of this.order){
-      let quantity = product.quantity
-      let price = this.productsList[this.findIndex(product.id)].price
-      total += quantity * price
+      total += this.calculateSubTotal(product.id, product.quantity)
     }
     return total.toFixed(1)
   }
 
   trackByProductId(_index: number, productQuantity: ProductQuantity){
     return productQuantity.id
-  }
-
-  findIndex(id: number) {
-    return this.productsList.findIndex(product => product.id === id)
   }
 }
