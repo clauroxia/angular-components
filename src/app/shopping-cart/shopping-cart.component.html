@@ -11,12 +11,12 @@
       >
         <p
           class="shopping-cart__content__product"
-          *ngIf="calculateSubTotal(item.id, item.quantity)"
+          *ngIf="subtotal"
         >
           {{ name }}
           ($ {{ price }} x {{ item.quantity }})
         </p>
-        <p>$ {{ subtotal.toFixed(1) }}</p>
+        <p>$ {{ calculateSubTotal(item.id, item.quantity) }}</p>
       </li>
     </ul>
     <div class="shopping-cart__content__total">

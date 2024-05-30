@@ -28,13 +28,13 @@ export class ShoppingCartComponent {
     this.name = this.productsList[index].name
     this.price = this.productsList[index].price
     this.subtotal = this.price*quantity
-    return this.subtotal
+    return this.subtotal.toFixed(1)
   }
 
   calculateTotal(){
     let total = 0
     for (let product of this.order){
-      total += this.calculateSubTotal(product.id, product.quantity)
+      total += parseFloat(this.calculateSubTotal(product.id, product.quantity))
     }
     return total.toFixed(1)
   }
