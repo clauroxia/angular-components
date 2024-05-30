@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import pokemons from '../../data/pokemons.json';
+import pokemons from '../../../data/pokemons.json';
 
 interface Pokemon {
   id: number;

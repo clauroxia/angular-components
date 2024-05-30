@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CounterComponent } from './components/counter/counter.component';
 import pokemons from '../data/pokemons.json';
-import { StoreComponent } from './store/store.component';
-import { FilterComponent } from './filter/filter.component';
+import { StoreComponent } from './components/store/store.component';
+import { FilterComponent } from './components/filter/filter.component';
 
 @Component({
   selector: 'app-root',
